@@ -104,7 +104,7 @@ export function App() {
             <div className="sugestoes">
               <div className="sugestoes-info">
                 <p className="sugestoes-voce">Sugestões para você</p>
-                <a className="sugestoes-ver" href="">
+                <a className="sugestoes-ver" href="#sugestoes">
                   Ver tudo
                 </a>
               </div>
@@ -130,19 +130,19 @@ export function App() {
 
       <footer className="footer-mobile">
         <div className="footer-mobile-icones">
-          <a href="">
+          <a href="#home">
             <ion-icon name="home"></ion-icon>
           </a>
-          <a href="">
+          <a href="#search">
             <ion-icon name="search-outline"></ion-icon>
           </a>
-          <a href="">
+          <a href="#add">
             <ion-icon name="add-circle-outline"></ion-icon>
           </a>
-          <a href="">
+          <a href="#like">
             <ion-icon name="heart-outline"></ion-icon>
           </a>
-          <a href="">
+          <a href="#profile">
             <ion-icon name="person-outline"></ion-icon>
           </a>
         </div>
