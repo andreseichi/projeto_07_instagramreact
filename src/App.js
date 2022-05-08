@@ -1,181 +1,135 @@
 import { Header } from './components/Header';
 import { Stories } from './components/Stories';
 import { Posts } from './components/Posts';
+import { Profile } from './components/Profile';
+import { Suggestion } from './components/Suggestion';
+import { Link } from './components/Link';
 
 export function App() {
+  const profile = {
+    srcProfile: './assets/images/dog-ufpa-pixelado-spotify.png',
+    nick: 'andre_seichi',
+    name: 'Tashiro',
+  };
+
+  const suggestions = [
+    {
+      srcProfile: './assets/images/badvibesmemes.png',
+      nick: 'bad.vibes.memes',
+      details: 'Segue você',
+    },
+    {
+      srcProfile: './assets/images/chibirdart.png',
+      nick: 'chibirdart',
+      details: 'Segue você',
+    },
+    {
+      srcProfile: './assets/images/razoesparaacreditar.png',
+      nick: 'razoesparaacreditar',
+      details: 'Novo no Instagram',
+    },
+    {
+      srcProfile: './assets/images/adorableanimals.png',
+      nick: 'adorableanimals',
+      details: 'Segue você',
+    },
+    {
+      srcProfile: './assets/images/smallcutecats.png',
+      nick: 'smallcutecats',
+      details: 'Segue você',
+    },
+  ];
+
+  const links = [
+    {
+      href: '#sobre',
+      text: 'Sobre',
+    },
+    {
+      href: '#ajuda',
+      text: 'Ajuda',
+    },
+    {
+      href: '#imprensa',
+      text: 'Imprensa',
+    },
+    {
+      href: '#api',
+      text: 'Api',
+    },
+    {
+      href: '#carreiras',
+      text: 'Carreiras',
+    },
+    {
+      href: '#privacidade',
+      text: 'Privacidade',
+    },
+    {
+      href: '#termos',
+      text: 'Termos',
+    },
+    {
+      href: '#localizações',
+      text: 'Localizações',
+    },
+    {
+      href: '#relevantes',
+      text: 'Contas mais relevantes',
+    },
+    {
+      href: '#hashtags',
+      text: 'Hashtags',
+    },
+    {
+      href: '#idioma',
+      text: 'Idioma',
+    },
+  ];
+
   return (
     <>
       <Header />
 
-      <main class="conteudo">
-        <div class="conteudo-esquerda">
+      <main className="conteudo">
+        <div className="conteudo-esquerda">
           <Stories />
           <Posts />
         </div>
 
-        <div class="conteudo-direita">
-          <div class="sidebar">
-            <div class="perfil">
-              <a href="">
-                <img
-                  class="perfil-foto"
-                  src="./assets/images/dog-ufpa-pixelado-spotify.png"
-                  alt=""
-                />
-              </a>
-              <div class="perfil-info">
-                <a class="perfil-nick" href="">
-                  andre_seichi
-                </a>
-                <p class="perfil-nome">Tashiro</p>
-              </div>
-            </div>
+        <div className="conteudo-direita">
+          <div className="sidebar">
+            <Profile {...profile} />
 
-            <div class="sugestoes">
-              <div class="sugestoes-info">
-                <p class="sugestoes-voce">Sugestões para você</p>
-                <a class="sugestoes-ver" href="">
+            <div className="sugestoes">
+              <div className="sugestoes-info">
+                <p className="sugestoes-voce">Sugestões para você</p>
+                <a className="sugestoes-ver" href="">
                   Ver tudo
                 </a>
               </div>
 
-              <div class="sugestoes-perfils">
-                <div class="sugestao">
-                  <div class="sugestao-perfil">
-                    <img
-                      class="sugestao-perfil-foto"
-                      src="./assets/images/badvibesmemes.png"
-                      alt=""
-                    />
-                    <div class="sugestao-perfil-info">
-                      <p class="sugestao-perfil-nick">bad.vibes.memes</p>
-                      <p class="sugestao-perfil-detalhes">Segue você</p>
-                    </div>
-                  </div>
-
-                  <div class="seguir">
-                    <p>Seguir</p>
-                  </div>
-                </div>
-
-                <div class="sugestao">
-                  <div class="sugestao-perfil">
-                    <img
-                      class="sugestao-perfil-foto"
-                      src="./assets/images/chibirdart.png"
-                      alt=""
-                    />
-                    <div class="sugestao-perfil-info">
-                      <p class="sugestao-perfil-nick">chibirdart</p>
-                      <p class="sugestao-perfil-detalhes">Segue você</p>
-                    </div>
-                  </div>
-
-                  <div class="seguir">
-                    <p>Seguir</p>
-                  </div>
-                </div>
-
-                <div class="sugestao">
-                  <div class="sugestao-perfil">
-                    <img
-                      class="sugestao-perfil-foto"
-                      src="./assets/images/razoesparaacreditar.png"
-                      alt=""
-                    />
-                    <div class="sugestao-perfil-info">
-                      <p class="sugestao-perfil-nick">razoesparaacreditar</p>
-                      <p class="sugestao-perfil-detalhes">Novo no Instagram</p>
-                    </div>
-                  </div>
-
-                  <div class="seguir">
-                    <p>Seguir</p>
-                  </div>
-                </div>
-
-                <div class="sugestao">
-                  <div class="sugestao-perfil">
-                    <img
-                      class="sugestao-perfil-foto"
-                      src="./assets/images/adorableanimals.png"
-                      alt=""
-                    />
-                    <div class="sugestao-perfil-info">
-                      <p class="sugestao-perfil-nick">adorableanimals</p>
-                      <p class="sugestao-perfil-detalhes">Segue você</p>
-                    </div>
-                  </div>
-
-                  <div class="seguir">
-                    <p>Seguir</p>
-                  </div>
-                </div>
-
-                <div class="sugestao">
-                  <div class="sugestao-perfil">
-                    <img
-                      class="sugestao-perfil-foto"
-                      src="./assets/images/smallcutecats.png"
-                      alt=""
-                    />
-                    <div class="sugestao-perfil-info">
-                      <p class="sugestao-perfil-nick">adorableanimals</p>
-                      <p class="sugestao-perfil-detalhes">Segue você</p>
-                    </div>
-                  </div>
-
-                  <div class="seguir">
-                    <p>Seguir</p>
-                  </div>
-                </div>
+              <div className="sugestoes-perfils">
+                {suggestions.map((suggestion) => (
+                  <Suggestion key={suggestion.nick} {...suggestion} />
+                ))}
               </div>
             </div>
 
-            <div class="sobre">
-              <div class="links-sobre">
-                <a class="link" href="">
-                  Sobre
-                </a>
-                <a class="link" href="">
-                  Ajuda
-                </a>
-                <a class="link" href="">
-                  Imprensa
-                </a>
-                <a class="link" href="">
-                  API
-                </a>
-                <a class="link" href="">
-                  Carreiras
-                </a>
-                <a class="link" href="">
-                  Privacidade
-                </a>
-                <a class="link" href="">
-                  Termos
-                </a>
-                <a class="link" href="">
-                  Localizações
-                </a>
-                <a class="link" href="">
-                  Contas mais relevantes
-                </a>
-                <a class="link" href="">
-                  Hashtags
-                </a>
-                <a class="link" href="">
-                  Idioma
-                </a>
+            <div className="sobre">
+              <div className="links-sobre">
+                {links.map(({ href, text }) => (
+                  <Link href={href} text={text} key={text} />
+                ))}
               </div>
-              <div class="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
+              <div className="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
             </div>
           </div>
         </div>
       </main>
 
-      <footer class="footer-mobile">
-        <div class="footer-mobile-icones">
+      <footer className="footer-mobile">
+        <div className="footer-mobile-icones">
           <a href="">
             <ion-icon name="home"></ion-icon>
           </a>
